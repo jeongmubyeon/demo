@@ -1,0 +1,108 @@
+/**
+ * Responsive mixin. The media breakpoints are as defined
+ * in the twitter bootstrap framework:
+ *
+ * - phone
+ * - tablet-portrait
+ * - tablet-landscape-desktop
+ * - large-desktop
+ *
+ * Additional parameters for tagetting retina and non-retina
+ * devices
+ *
+ * - retina
+ * - non-retina
+ *
+ * Moreover, a specific value in px can be passed which is
+ * used to generate a max-width media query.
+ */
+.divpop {
+  font-size: 12px;
+  width: 100%;
+  height: 350px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000000000;
+  display: block;
+  overflow: hidden;
+  background: #f1f1f1;
+  text-align: center;
+  /* Landscape phones and down */
+}
+
+@media (min-width: 981px) {
+  .divpop {
+    width: 450px;
+    height: 400px;
+    left: 50%;
+    top: 200px;
+    margin-left: -200px;
+    border: 1px solid #333;
+  }
+}
+
+.divpop .pop_img {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Landscape phones and down */
+}
+
+@media (min-width: 981px) {
+  .divpop .pop_img {
+    width: 450px;
+    height: 350px;
+  }
+}
+
+.divpop .close {
+  font-size: 12px;
+  width: 100%;
+  background: #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.divpop .close li {
+  width: 50%;
+  height: 50px;
+  display: inline-block;
+  background: #333;
+  float: left;
+}
+
+.divpop .close li:first-child {
+  border-right: 1px solid #666;
+}
+
+.divpop .close li a.todaycloseWin,
+.divpop .close li a.closeWin {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #ccc;
+  padding: 1em 0;
+  font-size: 1em;
+  /* Landscape phones and down */
+}
+
+.divpop .close li a.todaycloseWin:hover, .divpop .close li a.todaycloseWin:active,
+.divpop .close li a.closeWin:hover,
+.divpop .close li a.closeWin:active {
+  background: #000;
+  color: #fff;
+}
+
+@media (min-width: 981px) {
+  .divpop .close li a.todaycloseWin,
+  .divpop .close li a.closeWin {
+    font-size: 16px;
+  }
+}
